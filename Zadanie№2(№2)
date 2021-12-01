@@ -1,0 +1,25 @@
+using System;
+
+namespace Zadanie_2__2_
+{
+    //С некоторой даты по настоящий день прошло m месяцев, определить название месяца неизвестной даты.
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введите сколько месяцев прошло:");
+            int curmonth = DateTime.Now.Month; //сегодня
+            int m = Convert.ToInt32(Console.ReadLine());
+            for (int i = m; i >= 0; i--)
+            {
+                if (curmonth.Equals(0))
+                    curmonth = 12;
+                curmonth--;
+            }
+
+            string[] months = { "Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь" };
+            Console.WriteLine("Название месяца неизвестной даты: " + months[curmonth]);
+            
+        }
+    }
+}
