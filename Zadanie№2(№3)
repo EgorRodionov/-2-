@@ -1,0 +1,60 @@
+using System;
+
+namespace Zadanie_2__3_
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введите диапазон целых чисел от A до B");
+            Console.Write("Введите A: ");
+            byte A = byte.Parse(Console.ReadLine());
+            Console.Write("Введите B: ");
+            byte B = byte.Parse(Console.ReadLine());
+            Console.WriteLine();
+            Console.WriteLine("Кубы всех целых чисел из диапазона от А до В в обратном порядке:");
+            Console.WriteLine();
+            Console.WriteLine("while:");
+            
+            while(B >= A)
+            {
+                Console.WriteLine(B * B * B);
+                B--;
+            }
+            Console.WriteLine();
+
+            Console.Write("Введите A: ");
+            A = byte.Parse(Console.ReadLine());
+            Console.Write("Введите B: ");
+            B = byte.Parse(Console.ReadLine());
+            Console.WriteLine();
+            Console.WriteLine("Кубы всех целых чисел из диапазона от А до В в обратном порядке:");
+            Console.WriteLine();
+            Console.WriteLine("do while:");
+
+            do
+            {
+                Console.WriteLine(B * B * B);
+                B--;
+            }
+            while (B >= A);
+            Console.WriteLine();
+
+            Console.Write("Введите A: ");
+            A = byte.Parse(Console.ReadLine());
+            Console.Write("Введите B: ");
+            B = byte.Parse(Console.ReadLine());
+            Console.WriteLine();
+            Console.WriteLine("Кубы всех целых чисел из диапазона от А до В в обратном порядке:");
+            Console.WriteLine();
+            Console.WriteLine("for:");
+
+            for(int i = B; i >= A; i--)
+            {
+                Console.WriteLine(B * B * B);
+                B--;
+            }
+
+        }
+    }
+}
