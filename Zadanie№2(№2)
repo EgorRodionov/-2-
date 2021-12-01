@@ -16,10 +16,15 @@ namespace Zadanie_2__2_
                     curmonth = 12;
                 curmonth--;
             }
-
+            try
+            {
             string[] months = { "Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь" };
             Console.WriteLine("Название месяца неизвестной даты: " + months[curmonth]);
-            
+            }
+            catch(Exception)
+            {
+                 Console.WriteLine("Ошибка! Введите положительное число месяцев.");
+            }
         }
     }
 }
