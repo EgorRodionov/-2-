@@ -1,0 +1,23 @@
+using System;
+
+namespace Zadanie_2__4_
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int cout = 7;
+            for (int i = 1; i < 6; i++)
+            {
+                for (int j = 0; j < 7; j++)
+                {
+                    if (i > j)
+                        Console.Write(cout);
+                    Console.Write("  ");
+                }
+                Console.WriteLine();
+                cout--;
+            }
+        }
+    }
+}
